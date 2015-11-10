@@ -6,3 +6,8 @@
 
 
 Simple C# client to send leads to RdStation
+
+
+## RDStation rest API
+
+[Integrar sistema próprio para Criação de Leads no RD Station (API)](http://ajuda.rdstation.com.br/hc/pt-br/articles/200310589--Integrar-sistema-pr%C3%B3prio-para-Cria%C3%A7%C3%A3o-de-Leads-no-RD-Station-API-)
