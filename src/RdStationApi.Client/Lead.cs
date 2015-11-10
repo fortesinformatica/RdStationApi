@@ -8,12 +8,12 @@ namespace RdStationApi.Client
         /// <summary>
         /// Cria Lead
         /// </summary>
-        /// <param name="tokenRdstation">Token da sua conta do RD Station. Você deve utilizar o valor numérico encontrado dentro da sua conta da RD, neste https://www.rdstation.com.br/integracoes</param>
+        /// <param name="tokenRdStation">Token da sua conta do RD Station. Você deve utilizar o valor numérico encontrado dentro da sua conta da RD, neste https://www.rdstation.com.br/integracoes</param>
         /// <param name="identificador">Campo utilizado para identificar o evento de entrada do Lead no RD. Ex: form-contato, pedido-de-demo, pedido-de-trial, form-site</param>
         /// <param name="email">O email do Lead</param>
-        public Lead(string tokenRdstation, string identificador, string email)
+        public Lead(string tokenRdStation, string identificador, string email)
         {
-            TokenRdstation = tokenRdstation;
+            TokenRdStation = tokenRdStation;
             Identificador = identificador;
             Email = email;
         }
@@ -22,7 +22,7 @@ namespace RdStationApi.Client
         /// Token da sua conta do RD Station. Você deve utilizar o valor numérico encontrado dentro da sua conta da RD, neste https://www.rdstation.com.br/integracoes
         /// </summary>
         [JsonProperty("token_rdstation")]
-        public string TokenRdstation { get; }
+        public string TokenRdStation { get; }
 
         /// <summary>
         /// Campo utilizado para identificar o evento de entrada do Lead no RD. Ex: form-contato, pedido-de-demo, pedido-de-trial, form-site

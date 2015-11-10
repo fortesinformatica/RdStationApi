@@ -7,7 +7,7 @@ namespace RdStationApi.Client
         /// <summary>
         /// Token da sua conta do RD Station. Você deve utilizar o valor numérico encontrado dentro da sua conta da RD, neste https://www.rdstation.com.br/integracoes
         /// </summary>
-        string TokenRdstation { get; }
+        string TokenRdStation { get; }
 
         /// <summary>
         /// Campo utilizado para identificar o evento de entrada do Lead no RD. Ex: form-contato, pedido-de-demo, pedido-de-trial, form-site
