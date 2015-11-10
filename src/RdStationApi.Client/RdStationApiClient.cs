@@ -3,24 +3,16 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace RsStationApi.Client
+namespace RdStationApi.Client
 {
-    public class RsStationApiClient : IRsStationApiClient
+    public class RdStationApiClient : IRdStationApiClient
     {
         private const string BASE_ADDRESS = @"https://www.rdstation.com.br/api/1.3";
         private readonly HttpClient _httpClient;
 
-        public RsStationApiClient()
+        public RdStationApiClient(HttpClient client = default(HttpClient))
         {
-#if !NCRUNCH
-            _httpClient = new HttpClient { BaseAddress = new Uri(BASE_ADDRESS) };
-#endif
-        }
-
-        internal RsStationApiClient(HttpClient client)
-            : this()
-        {
-            _httpClient = client;
+            _httpClient = client ?? new HttpClient { BaseAddress = new Uri(BASE_ADDRESS) };
         }
 
         public async Task<bool> SendLead(ILead lead)

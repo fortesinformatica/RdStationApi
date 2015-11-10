@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RsStationApi.Client", "src\RsStationApi.Client\RsStationApi.Client.csproj", "{1490F497-A173-4240-84BD-B1383D5A7B55}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RsStationApi.Client.Tests", "src\RsStationApi.Client.Tests\RsStationApi.Client.Tests.csproj", "{4866C6FE-894D-4C16-A6FD-F2175B16DDE2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA200586-5C6A-4C2A-9358-378085544C26}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		update-nuspec-version.ps1 = update-nuspec-version.ps1
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdStationApi.Client", "src\RdStationApi.Client\RdStationApi.Client.csproj", "{1490F497-A173-4240-84BD-B1383D5A7B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdStationApi.Client.Tests", "src\RdStationApi.Client.Tests\RdStationApi.Client.Tests.csproj", "{4866C6FE-894D-4C16-A6FD-F2175B16DDE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

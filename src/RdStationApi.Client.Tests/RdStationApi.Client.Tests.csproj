@@ -7,8 +7,8 @@
     <ProjectGuid>{4866C6FE-894D-4C16-A6FD-F2175B16DDE2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RsStationApi.Client.Tests</RootNamespace>
-    <AssemblyName>RsStationApi.Client.Tests</AssemblyName>
+    <RootNamespace>RdStationApi.Client.Tests</RootNamespace>
+    <AssemblyName>RdStationApi.Client.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -56,7 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RsStationApiClientTests.cs" />
+    <Compile Include="RdStationApiClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,9 +64,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RsStationApi.Client\RsStationApi.Client.csproj">
+    <ProjectReference Include="..\RdStationApi.Client\RdStationApi.Client.csproj">
       <Project>{1490F497-A173-4240-84BD-B1383D5A7B55}</Project>
-      <Name>RsStationApi.Client</Name>
+      <Name>RdStationApi.Client</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

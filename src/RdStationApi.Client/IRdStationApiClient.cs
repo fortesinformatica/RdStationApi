@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace RsStationApi.Client
+namespace RdStationApi.Client
 {
-    public interface IRsStationApiClient
+    public interface IRdStationApiClient
     {
         Task<bool> SendLead(ILead lead);
     }

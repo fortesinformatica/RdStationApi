@@ -7,8 +7,8 @@
     <ProjectGuid>{1490F497-A173-4240-84BD-B1383D5A7B55}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RsStationApi.Client</RootNamespace>
-    <AssemblyName>RsStationApi.Client</AssemblyName>
+    <RootNamespace>RdStationApi.Client</RootNamespace>
+    <AssemblyName>RdStationApi.Client</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,10 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ILead.cs" />
-    <Compile Include="IRsStationApiClient.cs" />
+    <Compile Include="IRdStationApiClient.cs" />
     <Compile Include="Lead.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RsStationApiClient.cs" />
+    <Compile Include="RdStationApiClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

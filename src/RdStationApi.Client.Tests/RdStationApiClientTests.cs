@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace RsStationApi.Client.Tests
+namespace RdStationApi.Client.Tests
 {
     [TestFixture]
-    public class RsStationApiClientTests
+    public class RdStationApiClientTests
     {
-        private IRsStationApiClient _sut;
+        private IRdStationApiClient _sut;
         private HttpClient _httpClient;
         private Lead _lead;
 
@@ -18,7 +18,7 @@ namespace RsStationApi.Client.Tests
         public void SetUp()
         {
             _httpClient = Substitute.For<HttpClient>();
-            _sut = new RsStationApiClient(_httpClient);
+            _sut = new RdStationApiClient(_httpClient);
             _lead = new Lead("FakeToken", "FakeIdentificador", "FakeEmail");
         }
 

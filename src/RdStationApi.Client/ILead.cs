@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RsStationApi.Client
+namespace RdStationApi.Client
 {
     public interface ILead
     {

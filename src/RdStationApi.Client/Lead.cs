@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace RsStationApi.Client
+namespace RdStationApi.Client
 {
     public class Lead : ILead
     {
