@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>RsStationApi.Client</id>
+    <id>RdStationApi.Client</id>
     <version>1.0.5792.24091</version>
     <authors>Alberto Monteiro</authors>
     <owners>Fortes Tecnologia em Sistemas</owners>
