@@ -48,7 +48,7 @@ namespace RdStationApi.Client.Tests
             StringAssert.Contains($"\"twitter\":\"{_sut.Twitter}\"", serializeObject);
             StringAssert.Contains($"\"c_utmz\":\"{_sut.CUtmz}\"", serializeObject);
             StringAssert.Contains($"\"tags\":\"{_sut.Tags}\"", serializeObject);
-            StringAssert.Contains($"\"created_at\":\"{_sut.CreatedAt.ToString("yyyy-MM-ddTHH:mm:sszzz")}\"", serializeObject);
+            StringAssert.Contains($"\"created_at\":\"{_sut.CreatedAt.Value.ToString("yyyy-MM-ddTHH:mm:sszzz")}\"", serializeObject);
         }
     }
 }

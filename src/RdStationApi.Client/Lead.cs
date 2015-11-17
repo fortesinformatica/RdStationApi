@@ -16,6 +16,7 @@ namespace RdStationApi.Client
             TokenRdStation = tokenRdStation;
             Identificador = identificador;
             Email = email;
+            CreatedAt = DateTime.Now;
         }
 
         /// <summary>
@@ -106,6 +107,6 @@ namespace RdStationApi.Client
         /// Data da conversão do Lead
         /// </summary>
         [JsonProperty("created_at")]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
     }
 }

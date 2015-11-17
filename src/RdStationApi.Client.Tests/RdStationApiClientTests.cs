@@ -49,7 +49,7 @@ namespace RdStationApi.Client.Tests
             ILead lead = _lead;
             await _sut.SendLead(lead);
 
-            await _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == "conversions"), Arg.Any<CancellationToken>());
+            await _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == RdStationApiClient.BASE_ADDRESS + "conversions"), Arg.Any<CancellationToken>());
         }
     }
 }

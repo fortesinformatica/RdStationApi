@@ -77,6 +77,6 @@ namespace RdStationApi.Client
         /// <summary>
         /// Data da conversão do Lead
         /// </summary>
-        DateTime CreatedAt { get; set; }
+        DateTime? CreatedAt { get; set; }
     }
 }
