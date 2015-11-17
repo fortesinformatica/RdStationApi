@@ -1,19 +1,22 @@
-<?xml version="1.0"?>
-<package>
-  <metadata>
-    <id>RdStationApi.Client</id>
-    <version>1.0.5792.24091</version>
-    <authors>Alberto Monteiro</authors>
-    <owners>Fortes Tecnologia em Sistemas</owners>
-    <licenseUrl>https://github.com/fortesinformatica/RdStationApi/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/fortesinformatica/RdStationApi/</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Simple C# client to send leads to RdStation</description>
-    <copyright>Copyright Fortes Tecnologia em Sistemas 2015</copyright>
-    <tags>rdstation lead leads</tags>
-    <dependencies>
-      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.3" />
-      <dependency id="Newtonsoft.Json" version="7.0.1" />
-    </dependencies>
-  </metadata>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>RdStationApi.Client</id>
+        <version>1.0.5792.24091</version>
+        <authors>Alberto Monteiro</authors>
+        <owners>Fortes Tecnologia em Sistemas</owners>
+        <licenseUrl>https://github.com/fortesinformatica/RdStationApi/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/fortesinformatica/RdStationApi/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Simple C# client to send leads to RdStation</description>
+        <copyright>Copyright Fortes Tecnologia em Sistemas 2015</copyright>
+        <tags>rdstation lead leads</tags>
+        <dependencies>
+            <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.3" />
+            <dependency id="Newtonsoft.Json" version="7.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\src\RdStationApi.Client\bin\Release\RdStationApi.Client.dll" target="lib\net45\RdStationApi.Client.dll" />
+    </files>
 </package>
