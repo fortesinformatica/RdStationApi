@@ -6,8 +6,7 @@ namespace RdStationApi.Client
     {
         Task<bool> SendLead(ILead lead);
         bool SendLeadSync(ILead lead);
-        bool ChangeLeadStatusSync(LeadStatusRoot leadStatusRoot);
-        Task<bool> ChangeLeadStatus(LeadStatusRoot leadStatusRoot);
-
+        bool ChangeLeadStatusSync(string email, LeadStatusRoot leadStatusRoot);
+        Task<bool> ChangeLeadStatus(string email, LeadStatusRoot leadStatusRoot);
     }
 }

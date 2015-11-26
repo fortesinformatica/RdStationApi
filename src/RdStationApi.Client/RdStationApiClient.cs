@@ -17,27 +17,49 @@ namespace RdStationApi.Client
             _httpClient = client ?? new HttpClient { BaseAddress = new Uri(BASE_ADDRESS) };
         }
 
+        /// <summary>
+        /// Send Lead to RdStation Async
+        /// </summary>
+        /// <param name="lead">Lead to be Sent</param>
+        /// <returns>true if sent</returns>
         public async Task<bool> SendLead(ILead lead)
         {
             var response = await _httpClient.PostAsJsonAsync(CONVERSION_URL, lead);
             return response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created;
         }
 
+        /// <summary>
+        /// Send Lead to RdStation Sync
+        /// </summary>
+        /// <param name="lead">Lead to be Sent</param>
+        /// <returns>true if sent</returns>
         public bool SendLeadSync(ILead lead)
         {
             var response = _httpClient.PostAsJsonAsync(CONVERSION_URL, lead).Result;
             return response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created;
         }
 
-        public bool ChangeLeadStatusSync(LeadStatusRoot leadStatusRoot)
+        /// <summary>
+        /// Change Lead Status RdStation Async
+        /// </summary>
+        /// <param name="email">Lead e-mail</param>
+        /// <param name="leadStatusRoot">Lead Status to be Sent</param>
+        /// <returns>true if sent</returns>
+        public bool ChangeLeadStatusSync(string email, LeadStatusRoot leadStatusRoot)
         {
-            var response = _httpClient.PutAsJsonAsync(CHANGE_LEAD_URL, leadStatusRoot).Result;
+            var response = _httpClient.PutAsJsonAsync(CHANGE_LEAD_URL + email, leadStatusRoot).Result;
             return response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created;
         }
 
-        public async Task<bool> ChangeLeadStatus(LeadStatusRoot leadStatusRoot)
+        /// <summary>
+        /// Change Lead Status RdStation Sync
+        /// </summary>
+        /// <param name="email">Lead e-mail</param>
+        /// <param name="leadStatusRoot">Lead Status to be Sent</param>
+        /// <returns>true if sent</returns>
+        public async Task<bool> ChangeLeadStatus(string email, LeadStatusRoot leadStatusRoot)
         {
-            var response = await _httpClient.PutAsJsonAsync(CHANGE_LEAD_URL, leadStatusRoot);
+            var response = await _httpClient.PutAsJsonAsync(CHANGE_LEAD_URL + email, leadStatusRoot);
             return response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created;
         }
 

@@ -83,7 +83,7 @@ namespace RdStationApi.Client.Tests
         public async Task ChangeLeadStatusShouldSendAPut()
         {
             _httpClient.PutAsJsonAsync("leads", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
-            await _sut.ChangeLeadStatus(_leadStatus);
+            await _sut.ChangeLeadStatus("email@email.com", _leadStatus);
 
             await _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.Method == HttpMethod.Put), Arg.Any<CancellationToken>());
         }
@@ -92,7 +92,7 @@ namespace RdStationApi.Client.Tests
         public async Task ChangeLeadStatusShouldSendAPostWithJsonObjectInBody()
         {
             _httpClient.PutAsJsonAsync("leads", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
-            await _sut.ChangeLeadStatus(_leadStatus);
+            await _sut.ChangeLeadStatus("email@email.com", _leadStatus);
 
             await _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.Content.Headers.ContentType.MediaType == "application/json"), Arg.Any<CancellationToken>());
         }
@@ -101,9 +101,9 @@ namespace RdStationApi.Client.Tests
         public async Task ChangeLeadStatusShouldSendAPostToConversions()
         {
             _httpClient.PutAsJsonAsync("leads", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
-            await _sut.ChangeLeadStatus(_leadStatus);
+            await _sut.ChangeLeadStatus("email@email.com", _leadStatus);
 
-            await _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == RdStationApiClient.CHANGE_LEAD_URL), Arg.Any<CancellationToken>());
+            await _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == RdStationApiClient.CHANGE_LEAD_URL + "email@email.com"), Arg.Any<CancellationToken>());
         }
 
 
@@ -111,7 +111,7 @@ namespace RdStationApi.Client.Tests
         public void ChangeLeadStatusSyncShouldSendAPost()
         {
             _httpClient.PutAsJsonAsync("leads", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
-            _sut.ChangeLeadStatusSync(_leadStatus);
+            _sut.ChangeLeadStatusSync("email@email.com", _leadStatus);
 
             _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.Method == HttpMethod.Put), Arg.Any<CancellationToken>());
         }
@@ -120,7 +120,7 @@ namespace RdStationApi.Client.Tests
         public void ChangeLeadStatusSyncShouldSendAPostWithJsonObjectInBody()
         {
             _httpClient.PutAsJsonAsync("leads", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
-            _sut.ChangeLeadStatusSync(_leadStatus);
+            _sut.ChangeLeadStatusSync("email@email.com", _leadStatus);
 
             _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.Content.Headers.ContentType.MediaType == "application/json"), Arg.Any<CancellationToken>());
         }
@@ -129,9 +129,9 @@ namespace RdStationApi.Client.Tests
         public void ChangeLeadStatusSyncShouldSendAPostToConversions()
         {
             _httpClient.PutAsJsonAsync("leads", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
-            _sut.ChangeLeadStatusSync(_leadStatus);
+            _sut.ChangeLeadStatusSync("email@email.com", _leadStatus);
 
-            _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == RdStationApiClient.CHANGE_LEAD_URL), Arg.Any<CancellationToken>());
+            _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == RdStationApiClient.CHANGE_LEAD_URL + "email@email.com"), Arg.Any<CancellationToken>());
         }
     }
 }
