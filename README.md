@@ -10,7 +10,7 @@ Simple C# client to send leads to RdStation
 ## Instaling
 
 ````
-PM> Install-Package NhaNhaNha
+PM> Install-Package RdStationApi.Client
 ````
 
 ## Sending Lead Async
