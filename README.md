@@ -4,7 +4,6 @@
 [![Nuget downloads](http://img.shields.io/nuget/dt/RdStationApi.Client.svg)](http://www.nuget.org/packages/RdStationApi.Client/)
 [![Coverage Status](https://coveralls.io/repos/fortesinformatica/RdStationApi/badge.svg?branch=master&service=github)](https://coveralls.io/github/fortesinformatica/RdStationApi?branch=master)
 
-
 Simple C# client to send leads to RdStation
 
 ## Instaling
@@ -17,7 +16,7 @@ PM> Install-Package RdStationApi.Client
 
 ````csharp
 IRdStationApiClient client = new RdStationApiClient();
-ILead lead = new Lead("token", "identificadoe", "email@fulano.com");
+ILead lead = new Lead("token", "identificador", "email@fulano.com");
 var sent = await client.SendLead(lead);
 ````
 
@@ -25,7 +24,7 @@ var sent = await client.SendLead(lead);
 
 ````csharp
 IRdStationApiClient client = new RdStationApiClient();
-ILead lead = new Lead("token", "identificadoe", "email@fulano.com");
+ILead lead = new Lead("token", "identificador", "email@fulano.com");
 var sent = client.SendLeadSync(lead);
 ````
 
@@ -33,7 +32,7 @@ var sent = client.SendLeadSync(lead);
 
 ````csharp
 IRdStationApiClient client = new RdStationApiClient();
-var leadStatus = new LeadStatusRoot("FakeAuthToken", new LeadStatus(LifeCycleLeadStage.LeadQualificado, true));
+var leadStatus = new LeadStatusRoot("authPrivateToken", new LeadStatus(LifeCycleLeadStage.LeadQualificado, true));
 var sent = await client.ChangeLeadStatus(leadStatus);
 ````
 
@@ -41,7 +40,7 @@ var sent = await client.ChangeLeadStatus(leadStatus);
 
 ````csharp
 IRdStationApiClient client = new RdStationApiClient();
-var leadStatus = new LeadStatusRoot("FakeAuthToken", new LeadStatus(LifeCycleLeadStage.LeadQualificado, true));
+var leadStatus = new LeadStatusRoot("authPrivateToken", new LeadStatus(LifeCycleLeadStage.LeadQualificado, true));
 var sent = client.ChangeLeadStatusSync(leadStatus);
 ````
 
