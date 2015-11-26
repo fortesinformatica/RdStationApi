@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LeadJsonSerialization.cs" />
+    <Compile Include="LeadStatusRootJsonSerializationTest.cs" />
     <Compile Include="RdStationApiClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
