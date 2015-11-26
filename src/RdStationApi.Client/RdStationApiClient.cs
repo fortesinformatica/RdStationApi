@@ -20,5 +20,11 @@ namespace RdStationApi.Client
             var response = await _httpClient.PostAsJsonAsync(BASE_ADDRESS + "conversions", lead);
             return response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created;
         }
+
+        public bool SendLeadSync(ILead lead)
+        {
+            var response = _httpClient.PostAsJsonAsync(BASE_ADDRESS + "conversions", lead).Result;
+            return response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created;
+        }
     }
 }

@@ -51,5 +51,36 @@ namespace RdStationApi.Client.Tests
 
             await _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == RdStationApiClient.BASE_ADDRESS + "conversions"), Arg.Any<CancellationToken>());
         }
+
+
+        [Test]
+        public void SendLeadSyncShouldSendAPost()
+        {
+            _httpClient.PostAsJsonAsync("conversions", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
+            ILead lead = _lead;
+            _sut.SendLeadSync(lead);
+
+            _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.Method == HttpMethod.Post), Arg.Any<CancellationToken>());
+        }
+
+        [Test]
+        public void SendLeadSyncShouldSendAPostWithJsonObjectInBody()
+        {
+            _httpClient.PostAsJsonAsync("conversions", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
+            ILead lead = _lead;
+            _sut.SendLeadSync(lead);
+
+            _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.Content.Headers.ContentType.MediaType == "application/json"), Arg.Any<CancellationToken>());
+        }
+
+        [Test]
+        public void SendLeadSyncShouldSendAPostToConversions()
+        {
+            _httpClient.PostAsJsonAsync("conversions", Arg.Any<HttpContent>()).ReturnsForAnyArgs(new HttpResponseMessage(HttpStatusCode.OK));
+            ILead lead = _lead;
+            _sut.SendLeadSync(lead);
+
+            _httpClient.Received().SendAsync(Arg.Is<HttpRequestMessage>(h => h.RequestUri.ToString() == RdStationApiClient.BASE_ADDRESS + "conversions"), Arg.Any<CancellationToken>());
+        }
     }
 }
