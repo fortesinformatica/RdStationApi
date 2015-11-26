@@ -33,7 +33,7 @@ var sent = client.SendLeadSync(lead);
 ````csharp
 IRdStationApiClient client = new RdStationApiClient();
 var leadStatus = new LeadStatusRoot("authPrivateToken", new LeadStatus(LifeCycleLeadStage.LeadQualificado, true));
-var sent = await client.ChangeLeadStatus(leadStatus);
+var sent = await client.ChangeLeadStatus("lead@email.com.br", leadStatus);
 ````
 
 ## Chaning Lead Status Sync
@@ -41,7 +41,7 @@ var sent = await client.ChangeLeadStatus(leadStatus);
 ````csharp
 IRdStationApiClient client = new RdStationApiClient();
 var leadStatus = new LeadStatusRoot("authPrivateToken", new LeadStatus(LifeCycleLeadStage.LeadQualificado, true));
-var sent = client.ChangeLeadStatusSync(leadStatus);
+var sent = client.ChangeLeadStatusSync("lead@email.com.br", leadStatus);
 ````
 
 
