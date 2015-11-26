@@ -5,10 +5,11 @@
         <version>1.0.5792.24091</version>
         <authors>Alberto Monteiro</authors>
         <owners>Fortes Tecnologia em Sistemas</owners>
+        <iconUrl>http://p4.zdassets.com/hc/settings_assets/491907/200024984/2cEIro8OeZr0rdYtCHOkWw-logo_rd_central_de_ajuda_small.png</iconUrl>
         <licenseUrl>https://github.com/fortesinformatica/RdStationApi/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/fortesinformatica/RdStationApi/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Simple C# client to send leads to RdStation</description>
+        <description>Simple C# client to Send/Change leads to RdStation</description>
         <copyright>Copyright Fortes Tecnologia em Sistemas 2015</copyright>
         <tags>rdstation lead leads</tags>
         <dependencies>
