@@ -98,6 +98,12 @@ namespace RdStationApi.Client
         public string CUtmz { get; set; }
 
         /// <summary>
+        /// Origem do Lead
+        /// </summary>
+        [JsonProperty("traffic_source")]
+        public string TrafficSource { get; set; }
+
+        /// <summary>
         /// Tag do Lead
         /// </summary>
         [JsonProperty("tags")]

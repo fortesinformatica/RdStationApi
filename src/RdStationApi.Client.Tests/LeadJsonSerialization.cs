@@ -24,6 +24,7 @@ namespace RdStationApi.Client.Tests
                 Website = "Value",
                 Twitter = "Value",
                 CUtmz = "Value",
+                TrafficSource = "Value",
                 Tags = "Value",
                 CreatedAt = DateTime.Today
             };
@@ -47,6 +48,7 @@ namespace RdStationApi.Client.Tests
             StringAssert.Contains($"\"website\":\"{_sut.Website}\"", serializeObject);
             StringAssert.Contains($"\"twitter\":\"{_sut.Twitter}\"", serializeObject);
             StringAssert.Contains($"\"c_utmz\":\"{_sut.CUtmz}\"", serializeObject);
+            StringAssert.Contains($"\"traffic_source\":\"{_sut.TrafficSource}\"", serializeObject);
             StringAssert.Contains($"\"tags\":\"{_sut.Tags}\"", serializeObject);
             StringAssert.Contains($"\"created_at\":\"{_sut.CreatedAt.Value.ToString("yyyy-MM-ddTHH:mm:sszzz")}\"", serializeObject);
         }

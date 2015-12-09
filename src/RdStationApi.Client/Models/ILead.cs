@@ -70,6 +70,11 @@ namespace RdStationApi.Client
         string CUtmz { get; set; }
 
         /// <summary>
+        /// Origem do Lead
+        /// </summary>
+        string TrafficSource { get; set; }
+
+        /// <summary>
         /// Tag do Lead
         /// </summary>
         string Tags { get; set; }
