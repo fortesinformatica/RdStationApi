@@ -26,7 +26,7 @@ namespace RdStationApi.Client
         /// <summary>
         /// Marcar lead como oportunidade: true ou false
         /// </summary>
-        [JsonProperty("opportunity")]
+        [JsonProperty("opportunity", NullValueHandling = NullValueHandling.Ignore)]
         public bool? Opportunity { get; }
     }
 }
