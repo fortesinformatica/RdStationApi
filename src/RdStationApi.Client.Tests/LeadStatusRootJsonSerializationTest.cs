@@ -25,5 +25,13 @@ namespace RdStationApi.Client.Tests
             StringAssert.Contains($"\"lifecycle_stage\":{_sut.LeadStatus.LifecycleStage:D}", serializeObject);
             StringAssert.Contains($"\"opportunity\":{_sut.LeadStatus.Opportunity.ToString().ToLower()}", serializeObject);
         }
+
+        [Test]
+        public void IfOpportunityPropertyIsNullJsonShouldNotHaveThisProperty()
+        {
+            _sut = new LeadStatusRoot("FakeAtuToken", new LeadStatus(LifeCycleLeadStage.LeadQualificado, null));
+            var serializeObject = JsonConvert.SerializeObject(_sut);
+            StringAssert.DoesNotContain("\"opportunity\":null", serializeObject);
+        }
     }
 }
